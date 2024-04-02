@@ -8,7 +8,11 @@ const initialContactsData = [
   ]
 const contactsSlice = createSlice({
   name: "contacts",
-  initialState: { items: initialContactsData},
+  initialState: { 
+    items: initialContactsData,
+    loading: false,
+    error: null
+  },
   
   reducers: {
     addContact(state, action) {
@@ -22,4 +26,6 @@ const contactsSlice = createSlice({
 
 export const { addContact, deleteContact } = contactsSlice.actions;
 export const selectContacts = (state) => state.contacts.items;
+export const loading = (state) => state.contacts.loading;
+export const error = (state) => state.contacts.error;
 export const contactsReducer = contactsSlice.reducer;

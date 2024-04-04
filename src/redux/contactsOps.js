@@ -14,7 +14,7 @@ export const fetchContacts = createAsyncThunk(
         }
    });
 
-   export const addContact = createAsyncThunk(
+export const addNewContact = createAsyncThunk( // Перейменовано з addContact на addNewContact
     "contacts/addContact",
     async (newContact, thunkAPI) => {
         try {
@@ -25,7 +25,7 @@ export const fetchContacts = createAsyncThunk(
         }
     });
 
-    export const deleteContact = createAsyncThunk(
+export const removeContact = createAsyncThunk( // Перейменовано з deleteContact на removeContact
         "contacts/deleteContact",
         async (contactId, thunkAPI) => {
             try {
@@ -35,4 +35,3 @@ export const fetchContacts = createAsyncThunk(
                 return thunkAPI.rejectWithValue(error.message); 
             }
     });
-

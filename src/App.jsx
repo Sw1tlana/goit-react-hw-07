@@ -1,7 +1,7 @@
 import ContactForm from './components/ContactForm/ContactForm';
 import SearchBox from './components/SearchBox/SearchBox';
 import ContactList from './components/ContactList/ContactList';
-// import Loader from './components/Loader/Loader';
+import Loader from './components/Loader/Loader';
 import css from './App.module.css';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -23,7 +23,7 @@ function App() {
     <h1 className={css.heroFormTitle}>Phonebook</h1>
     <ContactForm />
       <SearchBox />
-      {isLoading && !error && <b>Request in progress...</b>}
+      {isLoading && !error && <Loader/>}
     <ContactList />  
     </div>
   )

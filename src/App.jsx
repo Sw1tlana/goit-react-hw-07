@@ -23,9 +23,8 @@ function App() {
     <h1 className={css.heroFormTitle}>Phonebook</h1>
     <ContactForm />
       <SearchBox />
-      {isLoading || error ?
-        <Loader /> :
-        <ContactList />}
+        {isLoading && !error &&  <Loader /> }
+        <ContactList />
     </div>
   )
 }

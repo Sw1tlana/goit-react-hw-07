@@ -15,7 +15,7 @@ function App() {
   const error = useSelector(selectError);
 
   useEffect(() => {
-    dispatch(fetchContacts())
+    dispatch(fetchContacts());
   }, [dispatch])
   
   return (

@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 const Contact = ({ id, name, number }) => {
   const dispatch = useDispatch();
 
-  const handleDelete = (id) => {
+  const handleDelete = () => {
     dispatch(deleteContact(id));
   }
 
@@ -19,7 +19,7 @@ const Contact = ({ id, name, number }) => {
             <p><FaPhoneAlt /><span className={css.contactInfo}>{number}</span></p>
           </div>
           <button className={css.contactDeleteBtn} type="button"
-          onClick={() => handleDelete(id)}>Delete</button>
+          onClick={handleDelete}>Delete</button>
         </div>
       </li>
   )

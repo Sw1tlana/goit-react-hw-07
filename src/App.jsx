@@ -15,12 +15,12 @@ function App() {
   const error = useSelector(selectError);
 
   useEffect(() => {
-    dispatch(fetchContacts());
-}, [dispatch]);
+    dispatch(fetchContacts())
+  }, [dispatch])
   
   return (
     <div className={css.formWrapper}>
-    <h1 className={css.heroFormTitle}>Phonebook</h1>
+      <h1 className={css.heroFormTitle}>Phonebook</h1>
     <ContactForm />
       <SearchBox />
         {isLoading && !error &&  <Loader /> }

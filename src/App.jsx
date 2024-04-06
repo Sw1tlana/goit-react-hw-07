@@ -24,7 +24,7 @@ function App() {
     <ContactForm />
       <SearchBox />
         {isLoading && !error &&  <Loader /> }
-        <ContactList />
+      <ContactList />
     </div>
   )
 }
